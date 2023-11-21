@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "64431ed4-6db7-4b48-9fa7-9bf9f426e33b",
+		"name": "PersonFinder",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31290913"
+	},
+	"item": [
+		{
+			"name": "getPerson",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:2000/person/?id=2",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"person",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createPerson",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"person_name\":\"Mina\",\r\n   \"latitude\":\"21.170240\", \r\n   \"longitude\":\"72.831062dssd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:2000/person/"
+			},
+			"response": []
+		},
+		{
+			"name": "person update & create latog by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"person_name\":\"Axali\",\r\n   \"latitude\":\"20.170240\", \r\n   \"longitude\":\"71.831062\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:2000/person?id=7",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"person"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPeopleAroundRadius",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:2000/person/getPeopleAroundRadius?person_name=Mina2&radius=12",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"person",
+						"getPeopleAroundRadius"
+					],
+					"query": [
+						{
+							"key": "person_name",
+							"value": "Mina2"
+						},
+						{
+							"key": "radius",
+							"value": "12"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

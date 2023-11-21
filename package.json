@@ -1,0 +1,57 @@
+{
+  "name": "oncokb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "prettier:fix": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "start": "tsc --watch & nodemon --inspect dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "npm run prettier:fix",
+      "npm run lint"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "helmet": "6.0.0",
+    "jm-ez-mysql": "^4.0.0",
+    "joi": "^17.11.0",
+    "lodash": "^4.17.21",
+    "method-override": "^3.0.0",
+    "moment-timezone": "^0.5.43",
+    "morgan": "^1.10.0",
+    "node-uuid": "^1.4.8",
+    "nodemailer": "^6.8.0",
+    "nodemon": "^2.0.20",
+    "sharp": "^0.31.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.0",
+    "sync-dotenv": "^2.7.0",
+    "typescript": "^4.8.4",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "@types/method-override": "^0.0.32",
+    "@typescript-eslint/eslint-plugin": "^5.41.0",
+    "@typescript-eslint/parser": "^5.41.0",
+    "eslint": "^8.26.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.3"
+  }
+}
